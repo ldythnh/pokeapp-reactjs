@@ -1,0 +1,32 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loadmore-btn {
+  background: linear-gradient(145deg, #fff176, #fdd835, #fbc02d);
+  width: fit-content;
+  border-radius: 12px;
+  margin: var(--spacing-2xl);
+  padding: 12px 16px;
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  cursor: pointer;
+  box-shadow:
+    4px 4px 8px rgba(0, 0, 0, 0.3),
+    -4px -4px 8px rgba(255, 255, 255, 0.2);
+  transition: var(--transition-base);
+}
+
+.loadmore-btn:hover {
+  background: linear-gradient(145deg, #fff59d, #fbc02d, #f5ba17);
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.35),
+    -6px -6px 12px rgba(255, 255, 255, 0.25);
+}
+
+.loadmore-btn:active {
+  transform: translateY(1px);
+}

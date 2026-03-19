@@ -1,0 +1,16 @@
+.pokecard-list {
+  margin-top: var(--spacing-xl);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+.pokecard-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  color: var(--color-text);
+}

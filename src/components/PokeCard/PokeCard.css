@@ -1,0 +1,32 @@
+.pokecard {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+}
+.pokecard:hover {
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-base);
+  transform: translateY(-2px);
+}
+
+.pokecard-img {
+  width: 150px;
+  height: 150px;
+}
+
+.pokecard-id {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.pokecard-type {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin: var(--spacing-sm) 0;
+}
+
+.pokecard-name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}

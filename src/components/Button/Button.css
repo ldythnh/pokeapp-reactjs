@@ -1,0 +1,13 @@
+.button {
+  border: none;
+  outline: none;
+  padding: var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  background: transparent;
+  color: black;
+}
+
+.button:hover {
+  cursor: pointer;
+}
