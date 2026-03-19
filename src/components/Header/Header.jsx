@@ -12,7 +12,6 @@ const Header = () => {
   // Handle input change event
   const handleInputChange = (event) => {
     setSearchValue(event.target.value);
-    console.log(event.target.value);
   };
 
   // Handle key press event
