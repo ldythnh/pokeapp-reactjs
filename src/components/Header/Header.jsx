@@ -7,6 +7,7 @@ import { useState } from "react";
 const Header = () => {
   // store the current search input value
   const [searchValue, setSearchValue] = useState("");
+
   const nav = useNavigate();
 
   // Handle input change event
@@ -14,11 +15,11 @@ const Header = () => {
     setSearchValue(event.target.value);
   };
 
-  // Handle key press event
-  const handleEnterKey = (event) => {
-    if (event.key === "Enter") {
-      nav(`/${searchValue}`);
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    nav(`/${searchValue}`);
+
+    setSearchValue("");
   };
 
   return (
@@ -29,19 +30,18 @@ const Header = () => {
         </Link>
 
         <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search by pokémon's name or ID"
-            value={searchValue}
-            onChange={handleInputChange}
-            onKeyDown={handleEnterKey}
-          />
-          <Link to={`/${searchValue}`}>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Search by pokémon's name or ID"
+              value={searchValue}
+              onChange={handleInputChange}
+            />
             <Button
               label={<i className="fa-solid fa-magnifying-glass"></i>}
               className="search-container-btn"
             />
-          </Link>
+          </form>
         </div>
       </nav>
     </header>
